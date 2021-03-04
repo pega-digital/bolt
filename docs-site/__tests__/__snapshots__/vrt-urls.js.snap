@@ -4,6 +4,7 @@ exports[`Bolt VRT URLs VRT URL file exists and matches snapshot 1`] = `
 "{
   \\"components\\": [
     \\"https://boltdesignsystem.com/pattern-lab/patterns/20-elements-button/index.html\\",
+    \\"https://boltdesignsystem.com/pattern-lab/patterns/20-elements-image/index.html\\",
     \\"https://boltdesignsystem.com/pattern-lab/patterns/20-elements-text-link/index.html\\",
     \\"https://boltdesignsystem.com/pattern-lab/patterns/40-components-accordion/index.html\\",
     \\"https://boltdesignsystem.com/pattern-lab/patterns/40-components-action-blocks/index.html\\",

@@ -75,6 +75,7 @@
     "@bolt/components-ul": "^3.1.0",
     "@bolt/components-video": "^3.1.0",
     "@bolt/elements-button": "^3.1.0",
+    "@bolt/elements-image": "^3.1.0",
     "@bolt/elements-text-link": "^3.1.0",
     "@bolt/global": "^3.1.0",
     "@bolt/layouts-list": "^3.1.0"

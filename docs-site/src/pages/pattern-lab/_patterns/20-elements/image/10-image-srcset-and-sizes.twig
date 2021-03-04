@@ -1,0 +1,54 @@
+{% set description %}
+  Use the <bolt-code-snippet display="inline">srcset</bolt-code-snippet> and <bolt-code-snippet display="inline">sizes</bolt-code-snippet> attributes to render various resolutions of the same image at specific breakpoints.
+{% endset %}
+
+{% set notes %}
+  <bolt-ol>
+    <bolt-li>The <bolt-code-snippet display="inline">srcset</bolt-code-snippet> attribute accepts one or more strings separated by commas, indicating possible image sources for the user agent to use. Each string is composed of a URL to an image and a width descriptor. For example, <bolt-code-snippet display="inline">srcset="image/400x300.jpg 400w, image/800x600.jpg 800w, image/1600x1200.jpg 1600w"</bolt-code-snippet>.</bolt-li>
+    <bolt-li>The <bolt-code-snippet display="inline">sizes</bolt-code-snippet> attribute should contain a number value with the  <bolt-code-snippet display="inline">vw</bolt-code-snippet> unit. The number should be determined by the largest size which the image could take up relative to screen size. For example, a large image taking up full width of a page should use something around <bolt-code-snippet display="inline">96vw</bolt-code-snippet> to <bolt-code-snippet display="inline">100vw</bolt-code-snippet>; a small image taking up 1 column of a 3-column layout should use <bolt-code-snippet display="inline">33vw</bolt-code-snippet>.</bolt-li>
+    <bolt-li>For more advanced use cases, reference the <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images" class="e-bolt-text-link">MDN article on responsive images</a>.</bolt-li>
+  </bolt-ol>
+{% endset %}
+
+{% set demo %}
+  {% include '@bolt-elements-image/image.twig' with {
+    attributes: {
+      alt: 'Alt text.',
+      src: 'https://via.placeholder.com/800x450',
+      srcset: 'https://via.placeholder.com/400x225 400w, https://via.placeholder.com/800x450 800w',
+      sizes: '50vw',
+      width: 800,
+      height: 450,
+    },
+  } only %}
+{% endset %}
+
+{% set twig_markup %}
+{% verbatim %}
+{% include '@bolt-elements-image/image.twig' with {
+  attributes: {
+    alt: 'Alt text.',
+    src: 'path/image-800.jpg',
+    srcset: 'path/image-400.jpg 400w, path/image-800.jpg 800w',
+    sizes: '50vw',
+    width: 800,
+    height: 450,
+  },
+} only %}
+{% endverbatim %}
+{% endset %}
+
+{% set html_markup %}
+{% verbatim %}
+<img alt="Alt text." src="path/image-800.jpg" srcset="path/image-400.jpg 400w, path/image-800.jpg 800w" sizes="50vw" width=800 height=450 class="e-bolt-image">
+{% endverbatim %}
+{% endset %}
+
+{% include '@utils/pattern-doc-page.twig' with {
+  title: 'Responsive Resolutions',
+  description: description,
+  notes: notes,
+  demo: demo,
+  twig_markup: twig_markup,
+  html_markup: html_markup,
+} only %}

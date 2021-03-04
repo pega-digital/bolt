@@ -36,7 +36,7 @@
 {# DEPRECATED.  Don't use the `image` prop, use the `content` prop to pass a rendered image instead. #}
 {% if image %}
   {% set content %}
-    {% include "@bolt/image.twig" with image only %}
+    {% include "@bolt-components-image/image.twig" with image only %}
   {% endset %}
 {% endif %}
 

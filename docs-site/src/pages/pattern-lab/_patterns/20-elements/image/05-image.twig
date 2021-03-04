@@ -1,0 +1,51 @@
+{% set description %}
+  An image element embeds a responsive graphic on the page.
+{% endset %}
+
+{% set notes %}
+  <bolt-ol>
+    <bolt-li>To make an image accessible to screen readers and other assistive technology, make sure to include text description via the <bolt-code-snippet display="inline">alt</bolt-code-snippet> attribute.</bolt-li>
+    <bolt-li>To indicate an image as decoration, leave the <bolt-code-snippet display="inline">alt</bolt-code-snippet> attribute blank, do not remove it. For example: <bolt-code-snippet display="inline">alt=""</bolt-code-snippet>.</bolt-li>
+    <bolt-li>It is best practice to always define the <bolt-code-snippet display="inline">width</bolt-code-snippet> and <bolt-code-snippet display="inline">height</bolt-code-snippet> attributes, so the space that the image would take up is already calculated before the image finishes loading. This helps to reduce cumulative layout shifts.</bolt-li>
+    <bolt-li>If responsiveness is not needed, please use a plain <bolt-code-snippet display="inline">&lt;img&gt;</bolt-code-snippet> element instead.</bolt-li>
+  </bolt-ol>
+{% endset %}
+
+{% set demo %}
+  {% include '@bolt-elements-image/image.twig' with {
+    attributes: {
+      alt: 'Alt text.',
+      src: 'https://via.placeholder.com/400x225',
+      width: 400,
+      height: 225,
+    },
+  } only %}
+{% endset %}
+
+{% set twig_markup %}
+{% verbatim %}
+{% include '@bolt-elements-image/image.twig' with {
+  attributes: {
+    alt: 'Alt text.',
+    src: 'path/image.jpg',
+    width: 400,
+    height: 225,
+  },
+} only %}
+{% endverbatim %}
+{% endset %}
+
+{% set html_markup %}
+{% verbatim %}
+  <img alt="Alt text." src="path/image.jpg" width=400 height=225 class="e-bolt-image">
+{% endverbatim %}
+{% endset %}
+
+{% include '@utils/pattern-doc-page.twig' with {
+  title: 'Basic Image',
+  description: description,
+  notes: notes,
+  demo: demo,
+  twig_markup: twig_markup,
+  html_markup: html_markup,
+} only %}

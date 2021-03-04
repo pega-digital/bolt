@@ -1,0 +1,83 @@
+{% set description %}
+  The <bolt-code-snippet display="inline">&lt;picture&gt;</bolt-code-snippet> HTML element can help with art directing a particular graphical area of a page.
+{% endset %}
+
+{% set notes %}
+  <bolt-ol>
+    <bolt-li><strong>When to use just the image element:</strong> loading different resolutions of the same image based on screen size.</bolt-li>
+    <bolt-li>
+      <strong>When to use the <bolt-code-snippet display="inline">&lt;picture&gt;</bolt-code-snippet> HTML element:</strong> loading completely different images altogether based on screen size.
+      <bolt-ul>
+        <bolt-li>The <bolt-code-snippet display="inline">srcset</bolt-code-snippet> attribute should be used.</bolt-li>
+        <bolt-li>The <bolt-code-snippet display="inline">x</bolt-code-snippet> descriptor should be used after the image file URL. This helps with loading higher resolution images for monitors with higher DPI.</bolt-li>
+        <bolt-li>The <bolt-code-snippet display="inline">media</bolt-code-snippet> attribute should be used to indicate multiple breakpoints.</bolt-li>
+        <bolt-li>For more advanced use cases, reference the <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images" class="e-bolt-text-link">MDN article on responsive images</a>.</bolt-li>
+      </bolt-ul>
+    </bolt-li>
+  </bolt-ol>
+{% endset %}
+
+{% set demo %}
+  <div style="display: grid; grid-template-columns: minmax(100px, 33vw) 1fr; grid-gap: 2rem; align-items: center;">
+    <picture>
+      <source srcset="https://via.placeholder.com/1600x800/001f5f/?text=Landscape+Image 2x, https://via.placeholder.com/800x400/001f5f/?text=Landscape+Image" media="(min-width: 1000px)">
+      <source srcset="https://via.placeholder.com/600x600/661d34/?text=Square+Image 2x, https://via.placeholder.com/300x300/661d34/?text=Square+Image" media="(min-width: 600px)">
+      <source srcset="https://via.placeholder.com/300x500/?text=Portrait+Image 2x, https://via.placeholder.com/150x250/?text=Portrait+Image" media="(min-width: 300px)">
+      {% include '@bolt-elements-image/image.twig' with {
+        attributes: {
+          alt: 'Alt text.',
+          src: 'https://via.placeholder.com/800x400/001f5f/?text=Landscape+Image',
+          srcset: 'https://via.placeholder.com/1600x800/001f5f/?text=Landscape+Image 2x',
+          width: 1000,
+          height: 500,
+        },
+      } only %}
+    </picture>
+    <p>Completely different images are loaded via the <bolt-code-snippet display="inline">&lt;picture&gt;</bolt-code-snippet> HTML element, resize this page to see the image on the left change.</p>
+  </div>
+{% endset %}
+
+{% set twig_markup %}
+{% verbatim %}
+<picture>
+  // Set the image sources
+  <source srcset="path/image-2x.jpg 2x, path/image.jpg" media="(min-width: 1000px)">
+  <source srcset="path/image-b-1200.jpg 2x, path/image-b-600.jpg" media="(min-width: 600px)">
+  <source srcset="path/image-a-600.jpg 2x, path/image-a-300.jpg" media="(min-width: 300px)">
+
+  // Set the fallback image
+  {% include '@bolt-elements-image/image.twig' with {
+    attributes: {
+      alt: 'Alt text.',
+      src: 'path/image.jpg',
+      srcset: 'path/image-2x.jpg 2x',
+      width: 1000,
+      height: 500,
+    },
+  } only %}
+</picture>
+{% endverbatim %}
+{% endset %}
+
+{% set html_markup %}
+{% verbatim %}
+<picture>
+  // Set the image sources
+  <source srcset="path/image-2x.jpg 2x, path/image.jpg" media="(min-width: 1000px)">
+  <source srcset="path/image-b-1200.jpg 2x, path/image-b-600.jpg" media="(min-width: 600px)">
+  <source srcset="path/image-a-600.jpg 2x, path/image-a-300.jpg" media="(min-width: 300px)">
+
+  // Set the fallback image
+  <img src="path/image.jpg" srcset="path/image-2x.jpg 2x" width=1000 height=500 class="e-bolt-image" alt="Alt text.">
+</picture>
+{% endverbatim %}
+{% endset %}
+
+{% include '@utils/pattern-doc-page.twig' with {
+  title: 'Use Case: Art Direction',
+  description: description,
+  notes: notes,
+  demo: demo,
+  twig_markup: twig_markup,
+  html_markup: html_markup,
+} only %}

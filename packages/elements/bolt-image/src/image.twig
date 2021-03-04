@@ -1,0 +1,27 @@
+{#
+/**
+ * Image Element
+ *
+ * Available variables:
+ * - Reference image.schema.js
+ */
+#}
+
+{# Schema Validation #}
+{% set schema = bolt.data.components['@bolt-elements-image'].schema %}
+{% if enable_json_schema_validation %}
+  {{ validate_data_schema(schema, _self)|raw }}
+{% endif %}
+
+{# Variables #}
+{% set this = init(schema) %}
+{% set attributes = create_attribute(attributes|default({})) %}
+
+{% set classes = [
+  'e-bolt-image',
+  this.data.fill ? 'e-bolt-image--fill',
+  this.data.background ? 'e-bolt-image--bg',
+] %}
+
+{# Template #}
+{% spaceless %}<img {{ attributes.addClass(classes) }} alt="{{ alt }}" src="{{ src }}" {% if srcset %}srcset="{{ srcset }}"{% endif %} {% if sizes %}sizes="{{ sizes }}"{% endif %}>{% endspaceless %}

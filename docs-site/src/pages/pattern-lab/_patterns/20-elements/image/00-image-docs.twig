@@ -1,0 +1,18 @@
+{% set usage %}{% verbatim %}
+{% include '@bolt-elements-image/image.twig' with {
+  fill: true,
+  attributes: {
+    alt: 'Image alt text',
+    src: 'path/image.jpg',
+    width: 500,
+    height: 500,
+  },
+} only %}
+{% endverbatim %}{% endset %}
+
+{% include '@utils/docs.twig' with {
+  componentName: 'image',
+  componentGroup: 'elements',
+  usage: usage
+} only %}
+

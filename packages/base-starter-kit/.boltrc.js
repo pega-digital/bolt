@@ -4,6 +4,7 @@ module.exports = {
       '@bolt/core-v3.x',
       '@bolt/global',
       '@bolt/elements-button',
+      '@bolt/elements-image',
       '@bolt/elements-text-link',
       '@bolt/components-accordion',
       '@bolt/components-action-blocks',

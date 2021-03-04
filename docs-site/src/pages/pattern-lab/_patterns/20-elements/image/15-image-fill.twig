@@ -1,0 +1,52 @@
+{% set description %}
+  The <bolt-code-snippet display="inline">fill</bolt-code-snippet> prop will stretch the image to fill up 100% width of its parent container, ignoring the image&rsquo;s true width and height.
+{% endset %}
+
+{% set notes %}
+  Even though they are ignored, it is best practice to always define the <bolt-code-snippet display="inline">width</bolt-code-snippet> and <bolt-code-snippet display="inline">height</bolt-code-snippet> attributes, so the space that the image would take up is already calculated before the image finishes loading. This helps to reduce cumulative layout shifts.
+{% endset %}
+
+{% set demo %}
+  {% include '@bolt-elements-image/image.twig' with {
+    fill: true,
+    attributes: {
+      alt: 'Alt text.',
+      src: 'https://via.placeholder.com/800x450',
+      srcset: 'https://via.placeholder.com/400x225 400w, https://via.placeholder.com/800x450 800w',
+      sizes: '96vw',
+      width: 800,
+      height: 450,
+    },
+  } only %}
+{% endset %}
+
+{% set twig_markup %}
+{% verbatim %}
+{% include '@bolt-elements-image/image.twig' with {
+  fill: true,
+  attributes: {
+    alt: 'Alt text.',
+    src: 'path/image-800.jpg',
+    srcset: 'path/image-400.jpg 400w, path/image-800.jpg 800w',
+    sizes: '96vw',
+    width: 800,
+    height: 450,
+  },
+} only %}
+{% endverbatim %}
+{% endset %}
+
+{% set html_markup %}
+{% verbatim %}
+<img alt="Alt text." src="path/image-800.jpg" srcset="path/image-400.jpg 400w, path/image-800.jpg 800w" sizes="96vw" width=800 height=450 class="e-bolt-image e-bolt-image--fill">
+{% endverbatim %}
+{% endset %}
+
+{% include '@utils/pattern-doc-page.twig' with {
+  title: 'Fill Image',
+  description: description,
+  notes: notes,
+  demo: demo,
+  twig_markup: twig_markup,
+  html_markup: html_markup,
+} only %}

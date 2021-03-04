@@ -30,7 +30,7 @@
   {% include "@bolt-components-device-viewer/parts/_camera.twig" only %}
   <div class="screen">
     {% if image %}
-      {{ include('@bolt/image.twig', {'image': image}, with_context = false) }}
+      {{ include('@bolt-components-image/image.twig', {'image': image}, with_context = false) }}
     {% endif %}
   </div>
   {% include "@bolt-components-device-viewer/parts/_home.twig" only %}
