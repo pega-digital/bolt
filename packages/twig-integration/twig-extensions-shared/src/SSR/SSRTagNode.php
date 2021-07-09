@@ -23,9 +23,13 @@ class SSRTagNode extends \Twig\Node\Node {
     $params = func_get_args();
     $contents = array_shift($params);
 
-    $stringLoader = new BoltStringLoader();
+    $env = new \Twig_Environment(new \Twig_Loader_Array([]), [
+      'debug' => true,
+      'autoescape' => false,
+    ]);
+    $template = $env->createTemplate('{{ contents }}');
+    $twig_to_html = $env->render($template, ['contents' => $contents]);
 
-    $twig_to_html = $stringLoader->render(array("string" => $contents, "data" => []));
     $rendered_html = \Bolt\TwigFunctions::bolt_ssr($twig_to_html);
     echo $rendered_html, PHP_EOL;
   }

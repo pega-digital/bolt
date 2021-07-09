@@ -10,7 +10,7 @@
 <div {{ attributes.addClass(classes) }}>
   <div class="c-bolt-toolbar__inner">
     <div class="c-bolt-toolbar__items">
-      {% if title or block('content_before') or content_before %}
+      {% if title or block('content_before') is defined or content_before %}
         <div class="c-bolt-toolbar__item c-bolt-toolbar__item--before">
           {% if title %}
             <div class="c-bolt-toolbar__title">
@@ -20,7 +20,7 @@
             </div>
           {% endif %}
 
-          {%  if block("content_before") %}
+          {%  if block("content_before") is defined %}
             {{ block("content_before") }}
           {% else %}
             {{ content_before }}
@@ -28,7 +28,7 @@
         </div>
       {% endif %}
 
-      {% if block("content") or content %}
+      {% if block("content") is defined or content %}
         <div class="c-bolt-toolbar__item c-bolt-toolbar__item--center">
           {%  if block("content") %}
             {{ block("content") }}
@@ -38,7 +38,7 @@
         </div>
       {% endif %}
 
-      {% if block("content_after") or content_after %}
+      {% if block("content_after") is defined or content_after %}
         <div class="c-bolt-toolbar__item c-bolt-toolbar__item--after">
           {% if block("content_after") %}
             {{ block("content_after") }}

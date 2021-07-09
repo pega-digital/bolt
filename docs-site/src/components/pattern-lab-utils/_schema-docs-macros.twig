@@ -164,9 +164,9 @@
       <!-- default value -->
       <td class="c-bds-docs-table__col">
 
-        {% if prop.default is sameas(false) %}
+        {% if prop.default is same as(false) %}
           <code>false</code>
-        {% elseif prop.default is sameas(true) %}
+        {% elseif prop.default is same as(true) %}
           <code>true</code>
         {% elseif prop.default is empty %}
           —
@@ -273,9 +273,9 @@
                     <!-- default value -->
                     <td class="c-bds-docs-table__col">
 
-                      {% if prop.default is sameas(false) %}
+                      {% if prop.default is same as(false) %}
                         <code>false</code>
-                      {% elseif prop.default is sameas(true) %}
+                      {% elseif prop.default is same as(true) %}
                         <code>true</code>
                       {% elseif prop.default is empty %}
                         —
@@ -338,9 +338,9 @@
                         <!-- default value -->
                         <td class="c-bds-docs-table__col">
 
-                          {% if prop.default is sameas(false) %}
+                          {% if prop.default is same as(false) %}
                             <code>false</code>
-                          {% elseif prop.default is sameas(true) %}
+                          {% elseif prop.default is same as(true) %}
                             <code>true</code>
                           {% elseif prop.default is empty %}
                             —
@@ -413,5 +413,5 @@
         </bolt-schema-table>
       </div>
     </details>
-  {% endif %}  
+  {% endif %}
 {% endmacro %}

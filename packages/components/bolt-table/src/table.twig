@@ -14,8 +14,8 @@
 
 {# Check that the component's current prop values are valid. if not, default to the schema default #}
 {% set format = format in format_options ? format : schema.properties.format.default %}
-{% set borderless = borderless is sameas(true) or borderless is sameas(false) ? borderless : schema.properties.borderless.default %}
-{% set first_col_fixed_width = first_col_fixed_width is sameas(true) or first_col_fixed_width is sameas(false) ? first_col_fixed_width : schema.properties.first_col_fixed_width.default %}
+{% set borderless = borderless is same as(true) or borderless is same as(false) ? borderless : schema.properties.borderless.default %}
+{% set first_col_fixed_width = first_col_fixed_width is same as(true) or first_col_fixed_width is same as(false) ? first_col_fixed_width : schema.properties.first_col_fixed_width.default %}
 
 {% set top_headers = headers.top %}
 {% set side_headers = headers.side %}

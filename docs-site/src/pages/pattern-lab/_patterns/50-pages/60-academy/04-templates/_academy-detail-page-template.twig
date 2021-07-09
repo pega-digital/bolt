@@ -1,5 +1,5 @@
-{% set pageControls = block("page_controls") %}
-{% set sideNav = block("side_nav") %}
+{% set pageControls = block("page_controls") is defined ? block("page_controls") : '' %}
+{% set sideNav = block("side_nav") is defined ? block("side_nav") : '' %}
 {% set breadcrumbs = [
   {
     "text": "Home",

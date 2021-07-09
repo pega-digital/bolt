@@ -19,7 +19,7 @@
   content ? 'c-bolt-navbar--custom' : ''
 ] %}
 
-{% for class in this.props.class %}
+{% for class in this.props['class'] %}
   {% set classes = classes|merge([class]) %}
 {% endfor %}
 

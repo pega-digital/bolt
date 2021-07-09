@@ -24,8 +24,8 @@
 {% set separator = separator in separator_options ? separator : schema.properties.separator.default %}
 {% set align = align in align_options ? align : schema.properties.align.default %}
 {% set valign = valign in valign_options ? valign : schema.properties.valign.default %}
-{% set inset = inset is sameas(true) or inset is sameas(false) ? inset : schema.properties.inset.default %}
-{% set nowrap = nowrap is sameas(true) or nowrap is sameas(false) ? nowrap : schema.properties.nowrap.default %}
+{% set inset = inset is same as(true) or inset is same as(false) ? inset : schema.properties.inset.default %}
+{% set nowrap = nowrap is same as(true) or nowrap is same as(false) ? nowrap : schema.properties.nowrap.default %}
 
 {# Conditions for the semantic tag usage #}
 {% if tag == "ol" or tag == "ul" %}

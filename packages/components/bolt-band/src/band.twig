@@ -5,7 +5,7 @@
 {% endif %}
 
 {# Deprecated #}
-{% if fullBleed is sameas(true) or fullBleed is sameas(false) %}
+{% if fullBleed is same as(true) or fullBleed is same as(false) %}
   {% set full_bleed = fullBleed %}
 {% endif %}
 {# row_gutter, content_row_start, items are also deprecated but this twig still supports them, see more comments below where items are being rendered #}

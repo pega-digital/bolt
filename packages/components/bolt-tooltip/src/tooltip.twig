@@ -23,7 +23,7 @@
 {% set outer_classes = [] %}
 {% set inner_classes = classes %}
 
-{% for class in this.props.class %}
+{% for class in this.props['class'] %}
   {% if class starts with "is-" or class starts with "has-" %}
     {% set inner_classes = inner_classes|merge([class]) %}
   {% elseif class starts with "c-bolt-" == false %}
@@ -37,7 +37,7 @@
 {% elseif direction == "down" %}
   {% set placement = "bottom" %}
 {% endif %}
-{% if noWrap is sameas(true) or noWrap is sameas(false) %}
+{% if noWrap is same as(true) or noWrap is same as(false) %}
   {% set noWrap = null %}
 {% endif %}
 {% if spacing %}

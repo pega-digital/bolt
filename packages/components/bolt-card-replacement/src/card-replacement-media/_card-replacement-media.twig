@@ -14,12 +14,12 @@
 {% if _card_replacement_media_content %}
   {{ _card_replacement_media_content }}
 {% else %}
-  {% if _card_replacement_image or block('media') %}
+  {% if _card_replacement_image or block('media') is defined %}
     <bolt-card-replacement-media {{ attributes }}>
       <ssr-keep for="bolt-card-replacement-media" class="c-bolt-card_replacement__media">
         {% if _card_replacement_image %}
           {% include '@bolt-components-image/image.twig' with _card_replacement_image only %}
-        {% elseif block('media') %}
+        {% elseif block('media') is defined %}
           {{ block('media') }}
         {% endif %}
       </ssr-keep>

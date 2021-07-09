@@ -26,7 +26,7 @@
 {% set autoshrink = autoshrink is defined ? autoshrink : schema.properties.autoshrink.default %}
 
 {# For backwards compatibility only, setting icon to exactly 'false' is the same as specifying 'none'.  Deprecated. #}
-{% if icon is sameas(false) %}
+{% if icon is same as(false) %}
   {% set icon = "none" %}
 {% endif %}
 

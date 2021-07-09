@@ -79,26 +79,22 @@ class GridTagNode extends \Twig\Node\Node {
     // Run the captured attributes through D8's createAttribute function, prior to rendering
     $attributes = new Attribute($merged_attributes);
 
-    $stringLoader = new BoltStringLoader();
-
-    //Setup data into 2 groups: attributes + everything else that we're going to namespace under the component name.
-    $data         = array(
-      "attributes" => $attributes,
-      "grid" => $GLOBALS['grid_props'][ $GLOBALS['counter'] ]
-    );
-    //@TODO: pull in template logic used here from external Twig file.
-    $string       = "
+    $env = new \Twig_Environment(new \Twig_Loader_Array([]), [
+      'debug' => true,
+      'autoescape' => false,
+    ]);
+    $template = $env->createTemplate("
       {% set classes = [
         grid.size ? 'o-grid--' ~ grid.size : '',
         grid.center ? 'o-grid--center' : '',
         grid.reverse == 'true' ? 'o-grid--rev' : ''
       ] %}
       <div {{ attributes.addClass(classes) | raw }}>
-      $contents
+        {{ contents }}
       </div>
-    ";
-    // Pre-render the inline Twig template + the data we've merged and normalized
-    $rendered = $stringLoader->render(array("string" => $string, "data" => $data));
+    ");
+    $rendered = $env->render($template, array('contents' => $contents, 'attributes' => $attributes, 'grid' => $GLOBALS['grid_props'][$GLOBALS['counter']] ));
+
     echo $rendered, PHP_EOL;
   }
 

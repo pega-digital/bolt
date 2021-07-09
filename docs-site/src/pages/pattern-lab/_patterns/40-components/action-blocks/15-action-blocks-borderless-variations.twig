@@ -21,7 +21,7 @@
 
 {% for borderless in [true, false] %}
   <h3>
-    Borderless: {% if borderless is sameas(true) %}true{% elseif borderless is sameas(false) %}false{% endif %}
+    Borderless: {% if borderless is same as(true) %}true{% elseif borderless is same as(false) %}false{% endif %}
   </h3>
   <div class="u-bolt-margin-bottom-medium">
     {% include "@bolt-components-action-blocks/action-blocks.twig" with {
