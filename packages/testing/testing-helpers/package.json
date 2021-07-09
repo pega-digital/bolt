@@ -13,7 +13,7 @@
   "license": "MIT",
   "main": "index.js",
   "dependencies": {
-    "@basalt/twig-renderer": "boltdesignsystem/basalt-twig-renderer#master",
+    "@basalt/twig-renderer": "boltdesignsystem/basalt-twig-renderer#twig-upgrade",
     "@bolt/build-tools": "^4.0.0",
     "@bolt/drupal-twig-extensions": "^4.0.0",
     "json-schema-ref-parser": "^7.1.0",

@@ -17,7 +17,7 @@
     "setup": "composer run setup"
   },
   "dependencies": {
-    "@basalt/twig-renderer": "boltdesignsystem/basalt-twig-renderer#master",
+    "@basalt/twig-renderer": "boltdesignsystem/basalt-twig-renderer#twig-upgrade",
     "@bolt/build-utils": "^4.0.0",
     "@bolt/drupal-twig-extensions": "^4.0.0",
     "sleep-promise": "^8.0.1"

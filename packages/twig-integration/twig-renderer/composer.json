@@ -12,16 +12,22 @@
     {
       "type": "path",
       "url": "../twig-extensions-compat"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/boltdesignsystem/twig-tools",
+      "no-api": true
     }
   ],
   "require": {
     "bolt-design-system/core-php": "*",
     "bolt-design-system/drupal-twig-extensions": "*",
-    "twig/twig": "^1.42.5",
+    "twig/twig": "^1.42.5 || ^2.0",
     "webmozart/path-util": "*",
     "symfony/finder": "*"
   },
   "scripts": {
     "setup": "@composer install --no-interaction --prefer-dist --no-progress"
-  }
+  },
+  "minimum-stability": "dev"
 }

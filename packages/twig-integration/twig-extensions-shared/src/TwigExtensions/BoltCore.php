@@ -5,10 +5,13 @@ namespace Bolt\TwigExtensions;
 use BasaltInc\TwigTools;
 use Bolt;
 use \Webmozart\PathUtil\Path; // https://github.com/webmozart/path-util
+use Twig\Extension\InitRuntimeInterface;
+use Twig\Extension\GlobalsInterface;
+use Twig\Extension\AbstractExtension;
 
 require_once 'Faker.php';
 
-class BoltCore extends \Twig_Extension implements \Twig_Extension_InitRuntimeInterface {
+class BoltCore extends AbstractExtension implements InitRuntimeInterface, GlobalsInterface {
 
   public $data = [];
   public $version;

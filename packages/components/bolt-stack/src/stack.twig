@@ -15,7 +15,7 @@
 #}
 {% set outer_classes = [] %}
 
-{% for class in this.props.class %}
+{% for class in this.props['class'] %}
   {% if class starts with 'c-bolt-' == false %}
     {% set outer_classes = outer_classes|merge([class]) %}
   {% endif %}

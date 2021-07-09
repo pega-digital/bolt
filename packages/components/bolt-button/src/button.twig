@@ -100,7 +100,7 @@ Sort classes passed in via attributes into two groups:
 {% set outer_classes = [] %}
 {% set inner_classes = classes %}
 
-{% for class in this.props.class %}
+{% for class in this.props['class'] %}
   {% if class starts with 'is-' == true %}
     {% set inner_classes = inner_classes|merge([class]) %}
   {% elseif class starts with 'has-' == true %}

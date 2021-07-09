@@ -96,25 +96,12 @@ class GridCellNode extends \Twig\Node\Node {
      */
     $attributes = new Attribute($merged_attributes);
 
-    $stringLoader = new BoltStringLoader();
-
-    //Setup data into 2 groups: attributes + everything else that we're going to namespace under the component name.
-    $data         = array(
-      "attributes" => $attributes,
-      "cell" => $GLOBALS['cell_props'][ $GLOBALS['cell_counter'] ]
-    );
-
-    //@TODO: pull in template logic used here from external Twig file.
-    $string       = "
-      {% set classes = [] %}
-
-      <div {{ attributes.addClass(classes) | raw }}>
-      $contents
-      </div>
-    ";
-
-    // Pre-render the inline Twig template + the data we've merged and normalized
-    $rendered = $stringLoader->render(array("string" => $string, "data" => $data));
+    $env = new \Twig_Environment(new \Twig_Loader_Array([]), [
+      'debug' => true,
+      'autoescape' => false,
+    ]);
+    $template = $env->createTemplate('<div {{ attributes | raw }}> {{ contents }} </div>');
+    $rendered = $env->render($template, array('contents' => $contents, 'attributes' => $attributes ));
 
     echo $rendered, PHP_EOL;
   }

@@ -1402,9 +1402,9 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
-"@basalt/twig-renderer@boltdesignsystem/basalt-twig-renderer#master":
+"@basalt/twig-renderer@boltdesignsystem/basalt-twig-renderer#twig-upgrade":
   version "0.13.2"
-  resolved "https://codeload.github.com/boltdesignsystem/basalt-twig-renderer/tar.gz/c872ff9c50378a2c6834c009523c180408b07e7b"
+  resolved "https://codeload.github.com/boltdesignsystem/basalt-twig-renderer/tar.gz/163711717f5e16c992d6e599e72943dcb48c1168"
   dependencies:
     "@babel/core" "^7.13.1"
     "@babel/preset-env" "^7.13.5"

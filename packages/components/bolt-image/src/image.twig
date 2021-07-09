@@ -5,7 +5,7 @@
 {% endif %}
 
 {# DEPRECATED. 'ratio' should be a string, but boolean was previously supported. Boolean is now DEPRECATED. #}
-{% if ratio is sameas(false) or ratio is sameas(true) %}
+{% if ratio is same as(false) or ratio is same as(true) %}
   {% set _ratio_bool = ratio %}
 {% else %}
   {% set _ratio_string = ratio %}
@@ -37,7 +37,7 @@
 {% set _ph_image = placeholder_image|default(_image_data_bolt.base64|default(schema.properties.placeholder_image.default)) %}
 
 {% set _use_ratio = useAspectRatio or _ratio_bool ?? true %}
-{% set _can_use_ratio = _use_ratio is sameas(true) and _ratio_string != 'none' and width > 0 and height > 0 and not cover %}
+{% set _can_use_ratio = _use_ratio is same as(true) and _ratio_string != 'none' and width > 0 and height > 0 and not cover %}
 {# Only JPGs allowed, PNGs can have transparency and may not look right layered over placeholder #}
 {% set _can_use_placeholder = _can_use_ratio or cover %}
 

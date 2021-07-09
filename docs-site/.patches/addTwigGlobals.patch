@@ -1,18 +1,5 @@
 diff --git a/composer.json b/composer.json
 index 08b3a46..6d59ee4 100644
---- a/composer.json
-+++ b/composer.json
-@@ -25,7 +25,7 @@
- 	},
- 	"require": {
- 		"pattern-lab/core": "^2.0.0",
--		"twig/twig":        "~1.0"
-+		"twig/twig": "^1.35.0"
- 	},
- 	"extra": {
- 		"patternlab": {
-diff --git a/src/PatternLab/PatternEngine/Twig/Loaders/FilesystemLoader.php b/src/PatternLab/PatternEngine/Twig/Loaders/FilesystemLoader.php
-index 38f99bd..93c9832 100644
 --- a/src/PatternLab/PatternEngine/Twig/Loaders/FilesystemLoader.php
 +++ b/src/PatternLab/PatternEngine/Twig/Loaders/FilesystemLoader.php
 @@ -52,6 +52,7 @@ class FilesystemLoader extends Loader {

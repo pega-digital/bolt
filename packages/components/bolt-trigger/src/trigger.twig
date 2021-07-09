@@ -50,7 +50,7 @@
 {% set classes = [
   base_class,
   display ? "#{base_class}--display-#{display}" : "",
-  cursor and not disabled is sameas(true) ? "#{base_class}--cursor-#{cursor}" : "",
+  cursor and not disabled is same as(true) ? "#{base_class}--cursor-#{cursor}" : "",
   no_outline ? "#{base_class}--outline-none" : "",
 ] %}
 
@@ -62,7 +62,7 @@
 {% set outer_classes = [] %}
 {% set inner_classes = classes %}
 
-{% for class in this.props.class %}
+{% for class in this.props['class'] %}
   {% if class starts with "is-" or class starts with "has-" %}
     {% set inner_classes = inner_classes|merge([class]) %}
   {% elseif class starts with "c-bolt-" == false %}

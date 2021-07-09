@@ -20,7 +20,7 @@
 {% set attributes = attributes.setAttribute('data-bolt-page-header-desktop-bp', bolt.data.breakpoints.large) %}
 
 {# Set data-attribute used by Navbar for calculating offset. #}
-{% if this.data.static.value is sameas(false) %}
+{% if this.data.static.value is same as(false) %}
   {% set attributes = attributes.setAttribute('data-bolt-sticky-header', '') %}
 {% endif %}
 

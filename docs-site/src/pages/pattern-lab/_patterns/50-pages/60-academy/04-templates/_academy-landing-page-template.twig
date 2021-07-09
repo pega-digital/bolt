@@ -1,4 +1,4 @@
-{% if block("page_content") %}
+{% if block("page_content") is defined %}
   {% set mainContentBlock %}
     {{ block("page_content") }}
   {% endset %}

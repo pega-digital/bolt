@@ -15,19 +15,19 @@
   {% set _link_attributes = create_attribute(link.attributes|default({})) %}
 {% endif %}
 
-{% if block('background') %}
+{% if block('background') is defined %}
   {% set _background_block %}
     {{ block('background') }}
   {% endset %}
 {% endif %}
 
-{% if block('media') %}
+{% if block('media') is defined %}
   {% set _media_block %}
     {{ block('media') }}
   {% endset %}
 {% endif %}
 
-{% if block('body') %}
+{% if block('body') is defined %}
   {% set _body_block %}
     {{ block('body') }}
   {% endset %}
