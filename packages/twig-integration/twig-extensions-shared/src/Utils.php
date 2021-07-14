@@ -203,7 +203,7 @@ class Utils {
       return FALSE;
     }
     elseif (is_string($type)) {
-      if ($type == "array" || $type == "object") {
+      if ($type == "array" || $type == "object" || $type == "any") {
         return FALSE;
       }
     }
@@ -236,7 +236,8 @@ class Utils {
     $props = isset($items["attributes"]) ? $items["attributes"] : [];
 
     // Convert props to an attributes object if it's not already one.
-    $props = is_array($props) ? new Attribute($props) : $props;
+    // If it is already an object, clone it so that we don't unintentionally update the original below.
+    $props = is_array($props) ? new Attribute($props) : clone $props;
 
     if (!empty($schema["properties"])) {
       foreach ($schema["properties"] as $propName => $propSchema) {
