@@ -31,10 +31,10 @@
 
     &:hover {
       cursor: help;
-      border-left-color: bolt-color(navy, light);
+      border-left-color: var(--bolt-colornavy-light);
 
       > .c-bds-breakpoint-demo__item__label {
-        background-color: bolt-color(navy, light);
+        background-color: var(--bolt-color-navy-light);
       }
     }
   }

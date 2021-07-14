@@ -2,7 +2,7 @@
   &__type {
     margin-bottom: 1rem;
     padding: 0 1rem 1rem;
-    border-bottom: 1px dashed bolt-color(navy, light);
+    border-bottom: 1px dashed var(--bolt-color-navy-light);
 
     h5 {
       margin-bottom: 1.5rem;

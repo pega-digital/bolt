@@ -16,7 +16,7 @@
     text-indent: -9999px;
     cursor: pointer;
     border-radius: 50px;
-    background: bolt-color(gray);
+    background: var(--bolt-color-gray);
   }
 
   label:after {
@@ -32,7 +32,7 @@
   }
 
   input:checked + label {
-    background: bolt-color(navy, light);
+    background: var(--bolt-color-navy-ight);
 
     &
       + .c-bds-docs__visually-hidden-inner

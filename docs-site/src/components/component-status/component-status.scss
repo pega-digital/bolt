@@ -27,7 +27,7 @@
 
   .c-bds-component-status--inprogress & {
     font-weight: var(--bolt-type-font-weight-semibold);
-    color: bolt-color(warning, dark);
+    color: var(--bolt-color-warning-dark);
   }
 }
 

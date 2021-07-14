@@ -72,7 +72,7 @@ bolt-schema-table.is-wc {
   //   linear-gradient(left, bolt-color(gray, xlight), bolt-color(gray, xdark)),
   //   linear-gradient(right, bolt-color(gray, xlight), bolt-color(gray, xdark));
 
-  background-color: bolt-color(white);
+  background-color: var(--bolt-color-white);
   background-image: -webkit-linear-gradient(left, #fff, hsla(0, 0%, 100%, 0)),
     -webkit-linear-gradient(right, #fff, hsla(0, 0%, 100%, 0)),
     -webkit-linear-gradient(left, #eaf0f6, rgba(234, 240, 246, 0)),
@@ -93,19 +93,19 @@ bolt-schema-table.is-wc {
     font-family: var(--bolt-type-font-family-body);
     font-size: var(--bolt-type-font-size-xsmall);
     line-height: var(--bolt-type-line-height-xsmall);
-    border: 1px solid bolt-color(gray, light);
+    border: 1px solid var(--bolt-color-gray-light);
     table-layout: auto;
   }
 
   thead {
-    border-bottom: 1px solid bolt-color(gray, light);
+    border-bottom: 1px solid var(--bolt-color-gray-light);
   }
 
   tr {
     transition: background-color 0.1s ease;
 
     &:not(:last-child) {
-      border-bottom: 1px solid bolt-color(gray, light);
+      border-bottom: 1px solid var(--bolt-color-gray-ight);
     }
   }
 
@@ -117,11 +117,11 @@ bolt-schema-table.is-wc {
     padding: var(--bolt-spacing-y-xsmall) var(--bolt-spacing-x-xsmall);
     font-size: var(--bolt-type-font-size-xsmall);
     font-weight: var(--bolt-type-font-weight-semibold);
-    color: bolt-color(gray, dark);
+    color: var(--bolt-color-gray-dark);
     line-height: var(--bolt-type-line-height-xsmall);
     text-align: left;
     vertical-align: bottom;
-    background-color: bolt-color(gray, xlight);
+    background-color: var(--bolt-color-gray-xlight);
   }
 
   td {
@@ -135,7 +135,7 @@ bolt-schema-table.is-wc {
 }
 
 .c-bds-schema-table__row {
-  border-top: 1px solid bolt-color(gray, light);
+  border-top: 1px solid var(--bolt-color-gray-light);
 }
 
 .c-bds-schema-table__col--key {

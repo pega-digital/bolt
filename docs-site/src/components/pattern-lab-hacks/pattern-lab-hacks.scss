@@ -42,7 +42,7 @@
   margin-left: calc(-1 * var(--bolt-spacing-x-medium));
   padding: calc(var(--bolt-spacing-y-medium) / 2) var(--bolt-spacing-x-medium);
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12);
-  background-color: bolt-color(white);
+  background-color: var(--bolt-color-white);
 }
 
 .sg-pattern-extra.sg-pattern-extra.sg-pattern-extra {

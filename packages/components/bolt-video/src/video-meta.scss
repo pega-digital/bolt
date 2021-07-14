@@ -28,7 +28,7 @@ $bolt-video-meta-transition: $bolt-transition;
   position: absolute;
   max-width: 100%;
   padding: calc(var(--bolt-spacing-x-xsmall) / 2) var(--bolt-spacing-x-xsmall);
-  color: bolt-color(white);
+  color: var(--bolt-color-white);
   border-radius: $bolt-video-meta-border-radius;
   background-color: rgba(bolt-color(black), 0.8);
   transition: opacity $bolt-video-meta-transition;

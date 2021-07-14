@@ -6,8 +6,8 @@ $bolt-video-background-max-height: 50.625vw;
 #{$bolt-namespace}-video {
   display: block;
   width: 100%;
-  background-color: bolt-color(
-    black
+  background-color: var(
+    --bolt-color-black
   ); // placeholder color before poster loads up.
 
   // @todo: `isBackgroundVideo` will be removed with Bolt v3.0
@@ -114,9 +114,11 @@ $bolt-video-background-max-height: 50.625vw;
   top: var(--bolt-spacing-y-xsmall);
   right: var(--bolt-spacing-x-xsmall);
   z-index: bolt-z-index('tooltip');
-  color: bolt-color(orange);
+  color: var(--bolt-color-orange);
   transition: all 0.3s ease;
-  @include bolt-css-vars((--#{$bolt-namespace}-theme-icon: bolt-color(orange)));
+  @include bolt-css-vars(
+    (--#{$bolt-namespace}-theme-icon: var(--bolt-color-orange))
+  );
 
   @include bolt-mq(small) {
     right: calc(
@@ -176,7 +178,7 @@ $bolt-video-background-max-height: 50.625vw;
 }
 
 .c-#{$bolt-namespace}-video__close-button-text {
-  color: bolt-color(white);
+  color: var(--bolt-color-white);
   text-decoration: underline;
 }
 

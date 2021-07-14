@@ -112,7 +112,7 @@ $bds-sidebar-width: 320px;
     }
 
     &.c-bds-layout__hamburger {
-      color: bolt-color(yellow);
+      color: var(--bolt-color-yellow);
 
       > span {
         display: none;
@@ -139,7 +139,7 @@ $bds-sidebar-width: 320px;
   left: 0;
   z-index: bolt-z-index('modalBG');
   pointer-events: none;
-  background-color: bolt-color(black);
+  background-color: var(--bolt-color-black);
   transition: opacity 0.3s cubic-bezier(0.23, 1, 0.32, 1),
     visibility 0.3s cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -152,7 +152,7 @@ $bds-sidebar-width: 320px;
   width: $bds-sidebar-width;
   overflow: auto;
   border-right: 1px solid #e0e2eb;
-  background-color: bolt-color(gray, xlight);
+  background-color: var(--bolt-color-gray-xlight);
   transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
   -webkit-overflow-scrolling: touch;
 
@@ -202,14 +202,14 @@ $bds-sidebar-width: 320px;
       font-size: 1.11rem;
       color: #fff;
       border-bottom: 1px solid #fff;
-      background-color: bolt-color(navy);
+      background-color: var(--bolt-color-navy);
     }
 
     .c-bds-layout__close-menu {
       position: absolute;
       top: 8px;
       right: 10px;
-      color: bolt-color(yellow);
+      color: var(--bolt-color-yellow);
     }
   }
 }
@@ -436,13 +436,13 @@ $bds-sidebar-width: 320px;
   margin-bottom: var(--var-spacing-y-medium);
   font-size: var(--bolt-type-font-size-xxlarge);
   font-weight: var(--bolt-type-font-weight-semibold);
-  color: bolt-color(black);
+  color: var(--bolt-color-black);
   line-height: var(--bolt-type-line-height-xxlarge);
 }
 
 .c-bds-docs__lead {
   font-weight: var(--bolt-type-font-weight-regular);
-  color: bolt-color(black);
+  color: var(--bolt-color-black);
   border: 1px dotted transparent;
   border-radius: 4px;
   transition: border 0.3s ease-in-out;
@@ -502,12 +502,12 @@ $bds-sidebar-width: 320px;
     font-family: var(--bolt-type-font-family-code);
     font-size: var(--bolt-type-font-size-small);
     line-height: var(--bolt-type-line-height-small);
-    border: 1px solid bolt-color(gray, light);
+    border: 1px solid var(--bolt-color-gray-light);
     table-layout: auto;
   }
 
   thead {
-    border-bottom: 1px solid bolt-color(gray, light);
+    border-bottom: 1px solid var(--bolt-color-gray-light);
   }
 
   tr {
@@ -515,7 +515,7 @@ $bds-sidebar-width: 320px;
   }
 
   tr + tr {
-    border-top: 1px solid bolt-color(gray, light);
+    border-top: 1px solid var(--bolt-color-gray-light);
   }
 
   tr:hover {
@@ -526,12 +526,12 @@ $bds-sidebar-width: 320px;
     padding: var(--bolt-spacing-y-small) var(--bolt-spacing-x-small);
     font-size: var(--bolt-type-font-size-xsmall);
     font-weight: var(--bolt-type-font-weight-semibold);
-    color: bolt-color(gray, dark);
+    color: var(--bolt-color-gray-dark);
     line-height: var(--bolt-type-line-height-xsmall);
     text-align: left;
     text-transform: uppercase;
     vertical-align: bottom;
-    background-color: bolt-color(gray, xlight);
+    background-color: var(--bolt-color-gray-xlight);
   }
 
   td {
@@ -622,7 +622,7 @@ $bds-sidebar-width: 320px;
   animation-duration: 12s;
   animation-fill-mode: both;
   animation-iteration-count: infinite;
-  fill: bolt-color(navy, light);
+  fill: var(--bolt-color-navy-light);
 
   @media (prefers-reduced-motion) {
     animation: none !important;
@@ -707,7 +707,7 @@ $bds-sidebar-width: 320px;
 
 .c-bds-home-highlights__item--color {
   .c-bds-home-highlights__item__media {
-    fill: bolt-color(orange);
+    fill: var(--bolt-color-orange);
   }
 }
 
@@ -717,13 +717,13 @@ $bds-sidebar-width: 320px;
   }
 
   .c-bds-home-highlights__item__media {
-    fill: bolt-color(teal);
+    fill: var(--bolt-color-teal);
   }
 }
 
 .c-bds-home-highlights__item--typography {
   .c-bds-home-highlights__item__media {
-    fill: bolt-color(navy, light);
+    fill: var(--bolt-color-navy-light);
   }
 }
 
@@ -741,12 +741,12 @@ $bds-sidebar-width: 320px;
     font-weight: var(--bolt-type-font-weight-semibold);
     line-height: var(--bolt-type-line-height-xlarge);
     text-decoration: none;
-    text-shadow: 0 0 1em bolt-color(black);
+    text-shadow: 0 0 1em var(--bolt-color-black);
     transition: text-shadow $bolt-transition;
 
     &:hover,
     &:focus {
-      text-shadow: 0 0 0.5em bolt-color(black);
+      text-shadow: 0 0 0.5em var(--bolt-color-black);
     }
   }
 }

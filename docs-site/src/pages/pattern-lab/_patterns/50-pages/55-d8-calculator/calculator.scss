@@ -11,7 +11,7 @@ $www-calculator-logo-spacing-size: 3px; // Hard px is used to avoid subpixel iss
   height: $www-calculator-logo-icon-size * 2 + $www-calculator-logo-spacing-size *
     4;
   margin-bottom: var(--bolt-spacing-y-medium);
-  color: bolt-color(navy);
+  color: var(--bolt-color-navy);
 
   &:last-child {
     margin-bottom: 0;
@@ -25,7 +25,7 @@ $www-calculator-logo-spacing-size: 3px; // Hard px is used to avoid subpixel iss
     line-height: 1;
     text-align: center;
     border-radius: bolt-border-radius(full);
-    background-color: bolt-color(white);
+    background-color: var(--bolt-color-white);
     transition: transform $bolt-transition;
 
     @at-root bolt-band.is-ready #{&} {
@@ -39,11 +39,11 @@ $www-calculator-logo-spacing-size: 3px; // Hard px is used to avoid subpixel iss
     }
 
     &:nth-child(2) {
-      background-color: bolt-color(yellow);
+      background-color: var(--bolt-color-yellow);
     }
 
     &:nth-child(3) {
-      background-color: bolt-color(teal);
+      background-color: var(--bolt-color-teal);
     }
   }
 }
@@ -120,28 +120,28 @@ $www-calculator-logo-spacing-size: 3px; // Hard px is used to avoid subpixel iss
 
     &--gray {
       color: bolt-text-contrast(bolt-color(gray, dark));
-      background-color: bolt-color(gray, dark);
+      background-color: var(--bolt-color-gray-dark);
     }
 
     &--navy {
       color: bolt-text-contrast(bolt-color(navy, light));
-      background-color: bolt-color(navy, light);
+      background-color: var(--bolt-color-navy-light);
     }
 
     &--teal {
       color: bolt-text-contrast(bolt-color(teal));
-      background-color: bolt-color(teal);
+      background-color: var(--bolt-color-teal);
     }
 
     &--orange {
       color: bolt-text-contrast(bolt-color(orange));
-      background-color: bolt-color(orange);
+      background-color: var(--bolt-color-orange);
     }
   }
 
   &__icon {
     padding: var(--bolt-spacing-y-xsmall) var(--bolt-spacing-x-xsmall);
-    color: bolt-color(gray, dark);
+    color: var(--bolt-color-gray-dark);
 
     > * {
       transform: rotate(270deg); // Rotating it to be arrow right
@@ -227,9 +227,9 @@ $www-calculator-logo-spacing-size: 3px; // Hard px is used to avoid subpixel iss
   left: var(--bolt-spacing-x-medium);
   z-index: 1; // Moves the stacking order above the band content.
   padding: var(--bolt-spacing-y-medium) var(--bolt-spacing-x-medium);
-  color: bolt-color(black);
+  color: var(--bolt-color-black);
   text-align: center;
-  border-left: 3px solid bolt-color(warning);
+  border-left: 3px solid var(--bolt-color-warning);
   border-radius: bolt-border-radius(small);
-  background-color: bolt-color(warning, light);
+  background-color: var(--bolt-color-warning-light);
 }

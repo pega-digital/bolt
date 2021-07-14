@@ -53,7 +53,7 @@
 
 .#{$choices-selector}__list--dropdown {
   width: auto;
-  color: bolt-color(black);
+  color: var(--bolt-color-black);
 
   @include bolt-mq(small) {
     width: 100%;
@@ -69,8 +69,11 @@
 }
 
 .#{$choices-selector}.is-focused {
-  border-color: bolt-color(navy, light);
-  @include bolt-shadow($key: 'level-20', $base-color: bolt-color(navy, light));
+  border-color: var(--bolt-color-navy-light);
+  @include bolt-shadow(
+    $key: 'level-20',
+    $base-color: var(--bolt-color-navy-light)
+  );
 }
 
 .c-bds-version-selector {
