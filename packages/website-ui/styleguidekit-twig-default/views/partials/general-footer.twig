@@ -105,12 +105,12 @@
         this.autoplayOnViewport();
       }
     })
-    thisPlayer.on('firstplay', function(player){
-      // NOTE: Safari does not immediately load the closed captioning menu on load, need to first wait until 'firstplay' event + 1/2 second wait time to avoid race conditions
+    thisPlayer.one('play', function(player) {
+      // NOTE: Safari does not immediately load the closed captioning menu on load, need to first wait until the first play event + 1/2 second wait time to avoid race conditions
       window.setTimeout(function(){
         this.closeCaptioning();
       }.bind(this), 500);
-    })
+    });
   };
 
   players.forEach(function(player) {
