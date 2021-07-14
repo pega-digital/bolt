@@ -8,62 +8,33 @@ exports[`Bolt Breadcrumb basic usage with contentItems including rendered compon
   >
     <ol class="c-bolt-breadcrumb__list">
       <li class="c-bolt-breadcrumb__item">
-        <bolt-link url="#!">
-          <a href="#!"
-             target="_self"
-             class="c-bolt-link c-bolt-link--display-inline c-bolt-link--valign-center"
-          >
-            <ssr-keep for="bolt-link"
-                      class="c-bolt-link__text"
-            >
-              Home
-            </ssr-keep>
-          </a>
-        </bolt-link>
-      </li>
-      <li class="c-bolt-breadcrumb__item">
-        <bolt-link url="#!">
-          <a href="#!"
-             target="_self"
-             class="c-bolt-link c-bolt-link--display-inline c-bolt-link--valign-center"
-          >
-            <ssr-keep for="bolt-link"
-                      class="c-bolt-link__text"
-            >
-              Other Page
-            </ssr-keep>
-          </a>
-        </bolt-link>
-      </li>
-      <li class="c-bolt-breadcrumb__item">
-        <bolt-link url="#!">
-          <a href="#!"
-             target="_self"
-             class="c-bolt-link c-bolt-link--display-inline c-bolt-link--valign-center"
-          >
-            <ssr-keep for="bolt-link"
-                      class="c-bolt-link__text"
-            >
-              Sub Page
-            </ssr-keep>
-          </a>
-        </bolt-link>
-      </li>
-      <li class="c-bolt-breadcrumb__item">
-        <bolt-link aria-current
-                   url="#!"
+        <a href="#!"
+           class="e-bolt-text-link"
         >
-          <a href="#!"
-             target="_self"
-             class="c-bolt-link c-bolt-link--display-inline c-bolt-link--valign-center"
-          >
-            <ssr-keep for="bolt-link"
-                      class="c-bolt-link__text"
-            >
-              Fourth Page
-            </ssr-keep>
-          </a>
-        </bolt-link>
+          Home
+        </a>
+      </li>
+      <li class="c-bolt-breadcrumb__item">
+        <a href="#!"
+           class="e-bolt-text-link"
+        >
+          Other Page
+        </a>
+      </li>
+      <li class="c-bolt-breadcrumb__item">
+        <a href="#!"
+           class="e-bolt-text-link"
+        >
+          Sub Page
+        </a>
+      </li>
+      <li class="c-bolt-breadcrumb__item">
+        <a href="#!"
+           aria-current
+           class="e-bolt-text-link"
+        >
+          Fourth Page
+        </a>
       </li>
     </ol>
   </nav>
@@ -78,46 +49,25 @@ exports[`Bolt Breadcrumb default 1`] = `
   >
     <ol class="c-bolt-breadcrumb__list">
       <li class="c-bolt-breadcrumb__item">
-        <bolt-link url="#!">
-          <a href="#!"
-             target="_self"
-             class="c-bolt-link c-bolt-link--display-inline c-bolt-link--valign-center"
-          >
-            <ssr-keep for="bolt-link"
-                      class="c-bolt-link__text"
-            >
-              Home
-            </ssr-keep>
-          </a>
-        </bolt-link>
+        <a href="#!"
+           class="e-bolt-text-link"
+        >
+          Home
+        </a>
       </li>
       <li class="c-bolt-breadcrumb__item">
-        <bolt-link url="#!">
-          <a href="#!"
-             target="_self"
-             class="c-bolt-link c-bolt-link--display-inline c-bolt-link--valign-center"
-          >
-            <ssr-keep for="bolt-link"
-                      class="c-bolt-link__text"
-            >
-              Other Page
-            </ssr-keep>
-          </a>
-        </bolt-link>
+        <a href="#!"
+           class="e-bolt-text-link"
+        >
+          Other Page
+        </a>
       </li>
       <li class="c-bolt-breadcrumb__item">
-        <bolt-link url="#!">
-          <a href="#!"
-             target="_self"
-             class="c-bolt-link c-bolt-link--display-inline c-bolt-link--valign-center"
-          >
-            <ssr-keep for="bolt-link"
-                      class="c-bolt-link__text"
-            >
-              Sub Page
-            </ssr-keep>
-          </a>
-        </bolt-link>
+        <a href="#!"
+           class="e-bolt-text-link"
+        >
+          Sub Page
+        </a>
       </li>
     </ol>
   </nav>

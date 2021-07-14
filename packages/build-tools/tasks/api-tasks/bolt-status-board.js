@@ -183,10 +183,12 @@ async function generateStatusBoard() {
             });
 
           const results = await renderString(`
-            {% include "@bolt-components-link/link.twig" with {
-              text: "<strong>${formattedPackageName}</strong>",
-              url: "${normalizedUrl}",
-              isHeadline: true,
+            {% include "@bolt-elements-text-link/text-link.twig" with {
+              content: "<strong>${formattedPackageName}</strong>",
+              reversed_underline: true,
+              attributes: {
+                href: "${normalizedUrl}",
+              }
             } %}
           `);
           const html = results.html;

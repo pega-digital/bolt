@@ -102,7 +102,7 @@ module.exports = {
         function(result) {
           browser.assert.ok(
             result.value > 1,
-            `<video-js> starts playing when <bolt-button> is clicked -- verified since the current video's play time is ${result.value} seconds`,
+            `<video-js> starts playing when button is clicked -- verified since the current video's play time is ${result.value} seconds`,
           );
         },
       )

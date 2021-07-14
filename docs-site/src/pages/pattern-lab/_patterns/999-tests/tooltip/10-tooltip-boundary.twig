@@ -37,14 +37,19 @@
     } only %}
   {% endset %}
   {% set link %}
-    {% include '@bolt-components-link/link.twig' with {
-      text: 'call to action',
-      url: 'https://pega.com',
+    {% include '@bolt-elements-text-link/text-link.twig' with {
+      content: 'call to action',
+      attributes: {
+        href: 'https://pega.com'
+      }
     } only %}
   {% endset %}
   {% set trigger %}
-    {% include '@bolt-components-button/button.twig' with {
-      text: 'This triggers a tooltip',
+    {% include '@bolt-elements-button/button.twig' with {
+      content: 'This triggers a popover',
+      attributes: {
+        type: 'button'
+      }
     } only %}
   {% endset %}
   {% set content %}

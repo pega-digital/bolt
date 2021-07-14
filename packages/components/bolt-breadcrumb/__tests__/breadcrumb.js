@@ -15,25 +15,31 @@ beforeAll(async () => {
     timeout: 0,
   });
 
-  const linkOne = await render('@bolt-components-link/link.twig', {
-    text: 'Home',
-    url: '#!',
-  });
-
-  const linkTwo = await render('@bolt-components-link/link.twig', {
-    text: 'Other Page',
-    url: '#!',
-  });
-
-  const linkThree = await render('@bolt-components-link/link.twig', {
-    text: 'Sub Page',
-    url: '#!',
-  });
-
-  const linkFour = await render('@bolt-components-link/link.twig', {
-    text: 'Fourth Page',
-    url: '#!',
+  const linkOne = await render('@bolt-elements-text-link/text-link.twig', {
+    content: 'Home',
     attributes: {
+      href: '#!',
+    },
+  });
+
+  const linkTwo = await render('@bolt-elements-text-link/text-link.twig', {
+    content: 'Other Page',
+    attributes: {
+      href: '#!',
+    },
+  });
+
+  const linkThree = await render('@bolt-elements-text-link/text-link.twig', {
+    content: 'Sub Page',
+    attributes: {
+      href: '#!',
+    },
+  });
+
+  const linkFour = await render('@bolt-elements-text-link/text-link.twig', {
+    content: 'Fourth Page',
+    attributes: {
+      href: '#!',
       'aria-current': true,
     },
   });

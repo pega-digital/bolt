@@ -106,18 +106,32 @@
     </span>
   {% endif %}
   {%- if url -%}
-    {% set linkVars = {
-      text: text,
-      url: url,
-      is_headline: (type != "text")
+    {% set _link_props = {
+      content: text,
+      reversed_underline: (type != "text"),
+      attributes: {
+        href: url,
+      }
     } %}
     {% if target %}
-      {% set linkVars = linkVars | merge({ target: target }) %}
+      {% set _link_attributes = _link_props.attributes %}
+      {% set _link_attributes = _link_attributes|merge({ target: target }) %}
+      {% set _link_props = _link_props|merge({ attributes: _link_attributes }) %}
     {% endif %}
+
     {% if icon %}
-      {% set linkVars = linkVars | merge({ icon: icon }) %}
+      {% set _link_icon %}
+        {% include "@bolt-components-icon/icon.twig" with icon only %}
+      {% endset %}
+
+      {% if iconPosition == 'before' %}
+        {% set _link_props = _link_props|merge({ icon_before: _link_icon }) %}
+      {% else %}
+        {% set _link_props = _link_props|merge({ icon_after: _link_icon }) %}
+      {% endif %}
     {% endif %}
-    {% include "@bolt/link.twig" with linkVars only %}
+
+    {% include '@bolt-elements-text-link/text-link.twig' with _link_props only %}
   {%- else -%}
     {% if hasIcon or quoted %}<span class="c-bolt-headline__text">{% endif %}
       {{- iconBefore -}}

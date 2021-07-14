@@ -1,28 +1,31 @@
+{% set _chevron %}
+  {% include '@bolt-components-icon/icon.twig' with {
+    name: 'chevron-right',
+  } only %}
+{% endset %}
+
 {% set usage %}{% verbatim %}
 {% include "@bolt-components-block-list/block-list.twig" with {
   items: [
-    include("@bolt-components-link/link.twig", {
-      text: "Link 1",
-      url: "#!",
-      icon: {
-        name: "chevron-right",
-        position: "before"
+    include("@bolt-elements-text-link/text-link.twig", {
+      content: "Link 1",
+      icon_before: _chevron,
+      attributes: {
+        href: '#!'
       }
     }),
-    include("@bolt-components-link/link.twig", {
-      text: "Link 2",
-      url: "#!",
-      icon: {
-        name: "chevron-right",
-        position: "before"
+    include("@bolt-elements-text-link/text-link.twig", {
+      content: "Link 2",
+      icon_before: _chevron,
+      attributes: {
+        href: '#!'
       }
     }),
-    include("@bolt-components-link/link.twig", {
-      text: "Link 3",
-      url: "#!",
-      icon: {
-        name: "chevron-right",
-        position: "before"
+    include("@bolt-elements-text-link/text-link.twig", {
+      content: "Link 3",
+      icon_before: _chevron,
+      attributes: {
+        href: '#!'
       }
     }),
     "Simple text example"

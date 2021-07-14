@@ -311,41 +311,31 @@ exports[`<bolt-headline> Component basic usage text 1`] = `
 
 exports[`<bolt-headline> Component headline with associated link 1`] = `
 <h2 class="c-bolt-headline c-bolt-headline--bold c-bolt-headline--xlarge c-bolt-headline--link">
-  <bolt-link url="www.testurl.com"
-             is-headline
+  <a href="www.testurl.com"
+     class="e-bolt-text-link e-bolt-text-link--reversed-underline"
   >
-    <a href="www.testurl.com"
-       target="_self"
-       class="c-bolt-link c-bolt-link--headline c-bolt-link--display-inline c-bolt-link--valign-center"
+    this is a headline
+    <span class="e-bolt-text-link__icon-after"
+          aria-hidden="true"
     >
-      <ssr-keep for="bolt-link"
-                class="c-bolt-link__text"
+      <bolt-icon name="chevron-right"
+                 aria-hidden="true"
       >
-        this is a headline
-      </ssr-keep>
-      <ssr-keep for="bolt-link"
-                class="c-bolt-link__icon"
-      >
-        <bolt-icon slot="after"
-                   name="chevron-right"
-                   aria-hidden="true"
-        >
-          <span class="c-bolt-icon c-bolt-icon--chevron-right">
-            <svg class="c-bolt-icon__icon"
-                 xmlns="http://www.w3.org/2000/svg"
-                 viewbox="0 0 32 32"
+        <span class="c-bolt-icon c-bolt-icon--chevron-right">
+          <svg class="c-bolt-icon__icon"
+               xmlns="http://www.w3.org/2000/svg"
+               viewbox="0 0 32 32"
+          >
+            <path fill="var(--bolt-theme-icon, currentColor)"
+                  fill-rule="evenodd"
+                  d="M13 7c-.6-.5-1.4-.5-2 0-.5.6-.5 1.4 0 2l7.1 7-7 7a1.3 1.3 0 00.9 2.3c.3 0 .7-.1 1-.4l8-8c.5-.5.5-1.3 0-1.8l-8-8z"
             >
-              <path fill="var(--bolt-theme-icon, currentColor)"
-                    fill-rule="evenodd"
-                    d="M13 7c-.6-.5-1.4-.5-2 0-.5.6-.5 1.4 0 2l7.1 7-7 7a1.3 1.3 0 00.9 2.3c.3 0 .7-.1 1-.4l8-8c.5-.5.5-1.3 0-1.8l-8-8z"
-              >
-              </path>
-            </svg>
-          </span>
-        </bolt-icon>
-      </ssr-keep>
-    </a>
-  </bolt-link>
+            </path>
+          </svg>
+        </span>
+      </bolt-icon>
+    </span>
+  </a>
 </h2>
 `;
 

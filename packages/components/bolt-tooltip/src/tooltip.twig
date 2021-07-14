@@ -74,14 +74,20 @@
         {{ trigger.text }}
       {% endif %}
     {% elseif trigger.type == "button" %}
-      {% include "@bolt-components-button/button.twig" with {
-        text: trigger.text,
-        icon: {
-          name: trigger.icon.name,
+      {% set trigger_icon %}
+        {% include "@bolt-components-icon/icon.twig" with {
+          name:trigger.icon.name,
           size: trigger.icon.size,
-          position: "before",
-        },
-        style: "secondary",
+        } only %}
+      {% endset %}
+
+      {% include '@bolt-elements-button/button.twig' with {
+        content: trigger.text,
+        hierarchy: 'secondary',
+        icon_before: trigger_icon,
+        attributes: {
+          type: 'button'
+        }
       } only %}
     {# End adapter for old trigger data #}
 

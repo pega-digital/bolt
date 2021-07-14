@@ -60,10 +60,11 @@
         {% endset %}
 
         {% if url %}
-          {% include "@bolt-components-link/link.twig" with {
-            display: "block",
-            url: url,
-            text: figureContent
+          {% include "@bolt-elements-text-link/text-link.twig" with {
+            content: figureContent,
+            attributes: {
+              href: url,
+            }
           } only %}
         {% else %}
           {{ figureContent }}

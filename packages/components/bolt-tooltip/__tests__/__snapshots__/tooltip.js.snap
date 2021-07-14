@@ -2,9 +2,11 @@
 
 exports[`<bolt-tooltip> Component Advanced usage: adding tooltip to button 1`] = `
 <bolt-tooltip uuid="12345">
-  <bolt-button>
+  <button type="button"
+          class="e-bolt-button"
+  >
     Download
-  </bolt-button>
+  </button>
   <span slot="content">
     File size: 25MB
   </span>

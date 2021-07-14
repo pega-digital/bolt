@@ -2,14 +2,18 @@
 
 exports[`<bolt-popover> Component UUID of the popover 1`] = `
 <bolt-popover uuid="custom-unique-id">
-  <bolt-button>
+  <button type="button"
+          class="e-bolt-button"
+  >
     This triggers a popover
-  </bolt-button>
+  </button>
   <span slot="content">
     This is the content of the popover with a
-    <bolt-link url="https://pega.com">
+    <a href="https://pega.com"
+       class="e-bolt-text-link"
+    >
       call to action
-    </bolt-link>
+    </a>
     .
   </span>
 </bolt-popover>
@@ -17,14 +21,18 @@ exports[`<bolt-popover> Component UUID of the popover 1`] = `
 
 exports[`<bolt-popover> Component basic usage 1`] = `
 <bolt-popover uuid="12345">
-  <bolt-button>
+  <button type="button"
+          class="e-bolt-button"
+  >
     This triggers a popover
-  </bolt-button>
+  </button>
   <span slot="content">
     This is the content of the popover with a
-    <bolt-link url="https://pega.com">
+    <a href="https://pega.com"
+       class="e-bolt-text-link"
+    >
       call to action
-    </bolt-link>
+    </a>
     .
   </span>
 </bolt-popover>
@@ -34,14 +42,18 @@ exports[`<bolt-popover> Component content placement: auto 1`] = `
 <bolt-popover placement="auto"
               uuid="12345"
 >
-  <bolt-button>
+  <button type="button"
+          class="e-bolt-button"
+  >
     This triggers a popover
-  </bolt-button>
+  </button>
   <span slot="content">
     This is the content of the popover with a
-    <bolt-link url="https://pega.com">
+    <a href="https://pega.com"
+       class="e-bolt-text-link"
+    >
       call to action
-    </bolt-link>
+    </a>
     .
   </span>
 </bolt-popover>
@@ -51,14 +63,18 @@ exports[`<bolt-popover> Component content placement: bottom 1`] = `
 <bolt-popover placement="bottom"
               uuid="12345"
 >
-  <bolt-button>
+  <button type="button"
+          class="e-bolt-button"
+  >
     This triggers a popover
-  </bolt-button>
+  </button>
   <span slot="content">
     This is the content of the popover with a
-    <bolt-link url="https://pega.com">
+    <a href="https://pega.com"
+       class="e-bolt-text-link"
+    >
       call to action
-    </bolt-link>
+    </a>
     .
   </span>
 </bolt-popover>
@@ -68,14 +84,18 @@ exports[`<bolt-popover> Component content placement: bottom-end 1`] = `
 <bolt-popover placement="bottom-end"
               uuid="12345"
 >
-  <bolt-button>
+  <button type="button"
+          class="e-bolt-button"
+  >
     This triggers a popover
-  </bolt-button>
+  </button>
   <span slot="content">
     This is the content of the popover with a
-    <bolt-link url="https://pega.com">
+    <a href="https://pega.com"
+       class="e-bolt-text-link"
+    >
       call to action
-    </bolt-link>
+    </a>
     .
   </span>
 </bolt-popover>
@@ -85,14 +105,18 @@ exports[`<bolt-popover> Component content placement: bottom-start 1`] = `
 <bolt-popover placement="bottom-start"
               uuid="12345"
 >
-  <bolt-button>
+  <button type="button"
+          class="e-bolt-button"
+  >
     This triggers a popover
-  </bolt-button>
+  </button>
   <span slot="content">
     This is the content of the popover with a
-    <bolt-link url="https://pega.com">
+    <a href="https://pega.com"
+       class="e-bolt-text-link"
+    >
       call to action
-    </bolt-link>
+    </a>
     .
   </span>
 </bolt-popover>
@@ -102,14 +126,18 @@ exports[`<bolt-popover> Component content placement: left 1`] = `
 <bolt-popover placement="left"
               uuid="12345"
 >
-  <bolt-button>
+  <button type="button"
+          class="e-bolt-button"
+  >
     This triggers a popover
-  </bolt-button>
+  </button>
   <span slot="content">
     This is the content of the popover with a
-    <bolt-link url="https://pega.com">
+    <a href="https://pega.com"
+       class="e-bolt-text-link"
+    >
       call to action
-    </bolt-link>
+    </a>
     .
   </span>
 </bolt-popover>
@@ -119,14 +147,18 @@ exports[`<bolt-popover> Component content placement: left-end 1`] = `
 <bolt-popover placement="left-end"
               uuid="12345"
 >
-  <bolt-button>
+  <button type="button"
+          class="e-bolt-button"
+  >
     This triggers a popover
-  </bolt-button>
+  </button>
   <span slot="content">
     This is the content of the popover with a
-    <bolt-link url="https://pega.com">
+    <a href="https://pega.com"
+       class="e-bolt-text-link"
+    >
       call to action
-    </bolt-link>
+    </a>
     .
   </span>
 </bolt-popover>
@@ -136,14 +168,18 @@ exports[`<bolt-popover> Component content placement: left-start 1`] = `
 <bolt-popover placement="left-start"
               uuid="12345"
 >
-  <bolt-button>
+  <button type="button"
+          class="e-bolt-button"
+  >
     This triggers a popover
-  </bolt-button>
+  </button>
   <span slot="content">
     This is the content of the popover with a
-    <bolt-link url="https://pega.com">
+    <a href="https://pega.com"
+       class="e-bolt-text-link"
+    >
       call to action
-    </bolt-link>
+    </a>
     .
   </span>
 </bolt-popover>
@@ -153,14 +189,18 @@ exports[`<bolt-popover> Component content placement: right 1`] = `
 <bolt-popover placement="right"
               uuid="12345"
 >
-  <bolt-button>
+  <button type="button"
+          class="e-bolt-button"
+  >
     This triggers a popover
-  </bolt-button>
+  </button>
   <span slot="content">
     This is the content of the popover with a
-    <bolt-link url="https://pega.com">
+    <a href="https://pega.com"
+       class="e-bolt-text-link"
+    >
       call to action
-    </bolt-link>
+    </a>
     .
   </span>
 </bolt-popover>
@@ -170,14 +210,18 @@ exports[`<bolt-popover> Component content placement: right-end 1`] = `
 <bolt-popover placement="right-end"
               uuid="12345"
 >
-  <bolt-button>
+  <button type="button"
+          class="e-bolt-button"
+  >
     This triggers a popover
-  </bolt-button>
+  </button>
   <span slot="content">
     This is the content of the popover with a
-    <bolt-link url="https://pega.com">
+    <a href="https://pega.com"
+       class="e-bolt-text-link"
+    >
       call to action
-    </bolt-link>
+    </a>
     .
   </span>
 </bolt-popover>
@@ -187,14 +231,18 @@ exports[`<bolt-popover> Component content placement: right-start 1`] = `
 <bolt-popover placement="right-start"
               uuid="12345"
 >
-  <bolt-button>
+  <button type="button"
+          class="e-bolt-button"
+  >
     This triggers a popover
-  </bolt-button>
+  </button>
   <span slot="content">
     This is the content of the popover with a
-    <bolt-link url="https://pega.com">
+    <a href="https://pega.com"
+       class="e-bolt-text-link"
+    >
       call to action
-    </bolt-link>
+    </a>
     .
   </span>
 </bolt-popover>
@@ -204,14 +252,18 @@ exports[`<bolt-popover> Component content placement: top 1`] = `
 <bolt-popover placement="top"
               uuid="12345"
 >
-  <bolt-button>
+  <button type="button"
+          class="e-bolt-button"
+  >
     This triggers a popover
-  </bolt-button>
+  </button>
   <span slot="content">
     This is the content of the popover with a
-    <bolt-link url="https://pega.com">
+    <a href="https://pega.com"
+       class="e-bolt-text-link"
+    >
       call to action
-    </bolt-link>
+    </a>
     .
   </span>
 </bolt-popover>
@@ -221,14 +273,18 @@ exports[`<bolt-popover> Component content placement: top-end 1`] = `
 <bolt-popover placement="top-end"
               uuid="12345"
 >
-  <bolt-button>
+  <button type="button"
+          class="e-bolt-button"
+  >
     This triggers a popover
-  </bolt-button>
+  </button>
   <span slot="content">
     This is the content of the popover with a
-    <bolt-link url="https://pega.com">
+    <a href="https://pega.com"
+       class="e-bolt-text-link"
+    >
       call to action
-    </bolt-link>
+    </a>
     .
   </span>
 </bolt-popover>
@@ -238,14 +294,18 @@ exports[`<bolt-popover> Component content placement: top-start 1`] = `
 <bolt-popover placement="top-start"
               uuid="12345"
 >
-  <bolt-button>
+  <button type="button"
+          class="e-bolt-button"
+  >
     This triggers a popover
-  </bolt-button>
+  </button>
   <span slot="content">
     This is the content of the popover with a
-    <bolt-link url="https://pega.com">
+    <a href="https://pega.com"
+       class="e-bolt-text-link"
+    >
       call to action
-    </bolt-link>
+    </a>
     .
   </span>
 </bolt-popover>
@@ -255,14 +315,18 @@ exports[`<bolt-popover> Component content spacing: medium 1`] = `
 <bolt-popover spacing="medium"
               uuid="12345"
 >
-  <bolt-button>
+  <button type="button"
+          class="e-bolt-button"
+  >
     This triggers a popover
-  </bolt-button>
+  </button>
   <span slot="content">
     This is the content of the popover with a
-    <bolt-link url="https://pega.com">
+    <a href="https://pega.com"
+       class="e-bolt-text-link"
+    >
       call to action
-    </bolt-link>
+    </a>
     .
   </span>
 </bolt-popover>
@@ -272,14 +336,18 @@ exports[`<bolt-popover> Component content spacing: none 1`] = `
 <bolt-popover spacing="none"
               uuid="12345"
 >
-  <bolt-button>
+  <button type="button"
+          class="e-bolt-button"
+  >
     This triggers a popover
-  </bolt-button>
+  </button>
   <span slot="content">
     This is the content of the popover with a
-    <bolt-link url="https://pega.com">
+    <a href="https://pega.com"
+       class="e-bolt-text-link"
+    >
       call to action
-    </bolt-link>
+    </a>
     .
   </span>
 </bolt-popover>
@@ -289,14 +357,18 @@ exports[`<bolt-popover> Component content spacing: small 1`] = `
 <bolt-popover spacing="small"
               uuid="12345"
 >
-  <bolt-button>
+  <button type="button"
+          class="e-bolt-button"
+  >
     This triggers a popover
-  </bolt-button>
+  </button>
   <span slot="content">
     This is the content of the popover with a
-    <bolt-link url="https://pega.com">
+    <a href="https://pega.com"
+       class="e-bolt-text-link"
+    >
       call to action
-    </bolt-link>
+    </a>
     .
   </span>
 </bolt-popover>
@@ -306,14 +378,18 @@ exports[`<bolt-popover> Component content spacing: xsmall 1`] = `
 <bolt-popover spacing="xsmall"
               uuid="12345"
 >
-  <bolt-button>
+  <button type="button"
+          class="e-bolt-button"
+  >
     This triggers a popover
-  </bolt-button>
+  </button>
   <span slot="content">
     This is the content of the popover with a
-    <bolt-link url="https://pega.com">
+    <a href="https://pega.com"
+       class="e-bolt-text-link"
+    >
       call to action
-    </bolt-link>
+    </a>
     .
   </span>
 </bolt-popover>
@@ -323,14 +399,18 @@ exports[`<bolt-popover> Component content theme: dark 1`] = `
 <bolt-popover theme="dark"
               uuid="12345"
 >
-  <bolt-button>
+  <button type="button"
+          class="e-bolt-button"
+  >
     This triggers a popover
-  </bolt-button>
+  </button>
   <span slot="content">
     This is the content of the popover with a
-    <bolt-link url="https://pega.com">
+    <a href="https://pega.com"
+       class="e-bolt-text-link"
+    >
       call to action
-    </bolt-link>
+    </a>
     .
   </span>
 </bolt-popover>
@@ -340,14 +420,18 @@ exports[`<bolt-popover> Component content theme: light 1`] = `
 <bolt-popover theme="light"
               uuid="12345"
 >
-  <bolt-button>
+  <button type="button"
+          class="e-bolt-button"
+  >
     This triggers a popover
-  </bolt-button>
+  </button>
   <span slot="content">
     This is the content of the popover with a
-    <bolt-link url="https://pega.com">
+    <a href="https://pega.com"
+       class="e-bolt-text-link"
+    >
       call to action
-    </bolt-link>
+    </a>
     .
   </span>
 </bolt-popover>
@@ -357,14 +441,18 @@ exports[`<bolt-popover> Component content theme: none 1`] = `
 <bolt-popover theme="none"
               uuid="12345"
 >
-  <bolt-button>
+  <button type="button"
+          class="e-bolt-button"
+  >
     This triggers a popover
-  </bolt-button>
+  </button>
   <span slot="content">
     This is the content of the popover with a
-    <bolt-link url="https://pega.com">
+    <a href="https://pega.com"
+       class="e-bolt-text-link"
+    >
       call to action
-    </bolt-link>
+    </a>
     .
   </span>
 </bolt-popover>
@@ -374,14 +462,18 @@ exports[`<bolt-popover> Component content theme: xdark 1`] = `
 <bolt-popover theme="xdark"
               uuid="12345"
 >
-  <bolt-button>
+  <button type="button"
+          class="e-bolt-button"
+  >
     This triggers a popover
-  </bolt-button>
+  </button>
   <span slot="content">
     This is the content of the popover with a
-    <bolt-link url="https://pega.com">
+    <a href="https://pega.com"
+       class="e-bolt-text-link"
+    >
       call to action
-    </bolt-link>
+    </a>
     .
   </span>
 </bolt-popover>
@@ -391,14 +483,18 @@ exports[`<bolt-popover> Component content theme: xlight 1`] = `
 <bolt-popover theme="xlight"
               uuid="12345"
 >
-  <bolt-button>
+  <button type="button"
+          class="e-bolt-button"
+  >
     This triggers a popover
-  </bolt-button>
+  </button>
   <span slot="content">
     This is the content of the popover with a
-    <bolt-link url="https://pega.com">
+    <a href="https://pega.com"
+       class="e-bolt-text-link"
+    >
       call to action
-    </bolt-link>
+    </a>
     .
   </span>
 </bolt-popover>

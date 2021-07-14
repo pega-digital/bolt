@@ -2,39 +2,23 @@
 /**
  * @file
  * A form button element.
- *
- * This is designed to work just like <bolt-button> except that:
- *    a) It accepts fewer parameters.  The underlying assumption is that you really
- *       shouldn't need many options for a form submit button.
- *    b) It is not rendered using javascript.  That ensures that Bolt javascript cannot
- *       interfere with anything the consuming end wants to do with its forms.
- *
- * Available variables
- *   - attributes (object): A list of HTML attributes for the button element.
- *   - text (renderable, REQUIRED): Text to show within the button
- *   - width (enum): One of "full", "full@small", or "" (empty string)
- *   - icon (object): data as expected by the bolt-icon component.
  */
 #}
 
-{% set attributes = create_attribute(attributes | default({})) %}
+{% set _button_props = {
+  content: text,
+  display:  'block',
+  attributes: {
+    type: 'submit'
+  }
+} %}
 
-{% set classes = [
-  "c-bolt-button",
-  "c-bolt-button--center",
-  "c-bolt-button--medium",
-  "c-bolt-button--primary",
-  width is not empty ? "c-bolt-button--" ~ width : "",
-] %}
+{% if icon %}
+  {% set _icon %}
+    {% include '@bolt-components-icon/icon.twig' with icon only %}
+  {% endset %}
 
-<button {{ attributes.addClass(classes) }}>
-  {% if icon %}
-    <span class="c-bolt-button__icon">
-      {% include "@bolt/icon.twig" with icon only %}
-    </span>
-  {% endif %}
+  {% set _button_props = _button_props|merge({ icon_before: _icon }) %}
+{% endif %}
 
-  <span class="c-bolt-button__item">
-    {{ text }}
-  </span>
-</button>
+{% include '@bolt-elements-button/button.twig' with _button_props only %}

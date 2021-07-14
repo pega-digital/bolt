@@ -41,13 +41,18 @@
         {% set gitBranch = gitBranch ? gitBranch : "master" %}
 
         {% set pinned_content %}
-          {% include "@bolt-components-button/button.twig" with {
-            url: "https://github.com/bolt-design-system/bolt/blob/" ~ gitBranch ~ "/docs-site/" ~  page.srcPath,
-            text: "Edit on Github",
-            hierarchy: "text",
+          {% set _pencil_icon %}
+            {% include '@bolt-components-icon/icon.twig' with {
+              name: 'pencil',
+            } only %}
+          {% endset %}
+          {% include '@bolt-elements-button/button.twig' with {
+            content: 'Edit on Github',
+            hierarchy: "transparent",
             size: "xsmall",
-            icon: {
-              name: "pencil"
+            icon_after: _pencil_icon,
+            attributes: {
+              href: "https://github.com/bolt-design-system/bolt/blob/" ~ gitBranch ~ "/docs-site/" ~  page.srcPath,
             }
           } only %}
         {% endset %}

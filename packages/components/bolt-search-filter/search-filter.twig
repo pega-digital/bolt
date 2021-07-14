@@ -14,16 +14,19 @@
 <bolt-{{ componentName }} bolt-component>
   <div {{ attributes.addClass(classes) }}>
     <div class="{{ "#{baseClass}__trigger" }}">
-      {% include "@bolt-components-button/button.twig" with {
-        "text": "Close search filter"|t,
-        "url": "#" ~ panelId,
-        "size": "xsmall",
-        "style": "primary",
-        "border_radius": "full",
-        "iconOnly": true,
-        "icon": {
-          "name": "more",
-          "size": "medium"
+      {% set _more_icon %}
+        {% include '@bolt-components-icon/icon.twig' with {
+          name: 'more',
+          size: 'medium'
+        } only %}
+      {% endset %}
+      {% include '@bolt-elements-button/button.twig' with {
+        content: 'Close search filter'|t,
+        border_radius: 'full',
+        size: 'xsmall',
+        icon_only: _more_icon,
+        attributes: {
+          href: "#" ~ panelId,
         }
       } only %}
     </div>
@@ -67,16 +70,20 @@
       </div>
 
       <div class="{{ "#{baseClass}__panel-controls #{baseClass}__panel-controls--close" }}">
-        {% include "@bolt-components-button/button.twig" with {
-          "text": "Close search filter"|t,
-          "url": "#!",
-          "size": "xsmall",
-          "style": "text",
-          "border_radius": "full",
-          "iconOnly": true,
-          "icon": {
-            "name": "close",
-            "size": "medium"
+        {% set _close_icon %}
+          {% include '@bolt-components-icon/icon.twig' with {
+            name: 'more',
+            size: 'medium'
+          } only %}
+        {% endset %}
+        {% include '@bolt-elements-button/button.twig' with {
+          content: 'Close search filter'|t,
+          border_radius: 'full',
+          size: 'xsmall',
+          hierarchy: 'transparent',
+          icon_only: _close_icon,
+          attributes: {
+            href: "#!",
           }
         } only %}
       </div>

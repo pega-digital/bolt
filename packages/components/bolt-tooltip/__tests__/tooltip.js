@@ -20,7 +20,7 @@ describe('<bolt-tooltip> Component', () => {
   // Advanced Usage
   test('Advanced usage: adding tooltip to button', async () => {
     const results = await render('@bolt-components-tooltip/tooltip.twig', {
-      trigger: '<bolt-button>Download</bolt-button>',
+      trigger: '<button type="button" class="e-bolt-button">Download</button>',
       content: 'File size: 25MB',
     });
     expect(results.ok).toBe(true);
