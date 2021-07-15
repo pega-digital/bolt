@@ -1,43 +1,42 @@
-{% set schema = bolt.data.components["@bolt-components-banner"].schema %}
+{% set schema = bolt.data.components['@bolt-components-banner'].schema %}
 
 {% if enable_json_schema_validation %}
   {{ validate_data_schema(schema, _self) | raw }}
 {% endif %}
 
 {# Variables #}
-{% set base_class = "c-bolt-banner" %}
 {% set this = init(schema) %}
 {% set inner_attributes = create_attribute({}) %}
 
 {# Array of classes based on the defined + default props #}
 {% set classes = [
-  base_class,
-  this.data.status ? base_class ~ "--status-" ~ this.data.status.value,
-  this.data.align ? base_class ~ "--align-" ~ this.data.align.value,
+  'c-bolt-banner',
+  this.data.status ? 'c-bolt-banner--status-' ~ this.data.status.value,
+  this.data.align ? 'c-bolt-banner--align-' ~ this.data.align.value,
 ] %}
 
 {#
   Sort classes passed in via attributes into two groups:
-  1. Those that should be applied to the inner tag (namely, "is-" and "has-" classes)
+  1. Those that should be applied to the inner tag (namely, 'is-' and 'has-' classes)
   2. Those that should be applied to the outer custom element (everything else EXCEPT c-bolt-* classes, which should never be passed in via attributes)
 #}
 {% set outer_classes = [] %}
 {% set inner_classes = classes %}
 
 {% for class in this.props.class %}
-  {% if class starts with "is-" or class starts with "has-" %}
+  {% if class starts with 'is-' or class starts with 'has-' %}
     {% set inner_classes = inner_classes|merge([class]) %}
-  {% elseif class starts with "c-bolt-" == false %}
+  {% elseif class starts with 'c-bolt-' == false %}
     {% set outer_classes = outer_classes|merge([class]) %}
   {% endif %}
 {% endfor %}
 
 <bolt-banner
-  {% if outer_classes %} class="{{ outer_classes|join(' ') }}" {% endif %}
-  {{ this.props|without("content")|without("class") }}
+  {% if outer_classes %} class='{{ outer_classes|join(' ') }}' {% endif %}
+  {{ this.props|without('content')|without('class') }}
 >
-  <div {% if inner_classes %} class="{{ inner_classes|join(' ') }}" {% endif %}>
-    <ssr-keep for="bolt-banner">
+  <div {% if inner_classes %} class='{{ inner_classes|join(' ') }}' {% endif %}>
+    <ssr-keep for='bolt-banner'>
       {{ content }}
     </ssr-keep>
   </div>

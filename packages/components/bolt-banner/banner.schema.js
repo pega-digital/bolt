@@ -19,14 +19,14 @@ module.exports = {
     status: {
       type: 'string',
       description: 'Sets the status that the banner is trying to convey.',
-      enum: ['error', 'warning', 'success', 'information'],
       default: 'information',
+      enum: ['error', 'warning', 'success', 'information'],
     },
     align: {
       type: 'string',
       description: 'Sets the text alignment of the content.',
-      enum: ['start', 'center', 'end'],
       default: 'center',
+      enum: ['start', 'center', 'end'],
     },
   },
 };

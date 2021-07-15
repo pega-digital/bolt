@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<bolt-banner> Component Basic usage 1`] = `
+exports[`Bolt banner default 1`] = `
 <bolt-banner>
   <div class="c-bolt-banner c-bolt-banner--status-information c-bolt-banner--align-center">
     <ssr-keep for="bolt-banner">
@@ -10,71 +10,94 @@ exports[`<bolt-banner> Component Basic usage 1`] = `
 </bolt-banner>
 `;
 
-exports[`<bolt-banner> Component Status of the banner message: error 1`] = `
-<bolt-banner status="error">
-  <div class="c-bolt-banner c-bolt-banner--status-error c-bolt-banner--align-center">
-    <ssr-keep for="bolt-banner">
-      This banner is trying to convey error
-    </ssr-keep>
-  </div>
+exports[`Bolt banner default 2`] = `
+<div class="c-bolt-banner c-bolt-banner--status-information c-bolt-banner--align-center">
+  <slot>
+  </slot>
+</div>
+`;
+
+exports[`Bolt banner default 3`] = `
+<bolt-banner>
+  This is a banner
 </bolt-banner>
 `;
 
-exports[`<bolt-banner> Component Status of the banner message: information 1`] = `
-<bolt-banner status="information">
+exports[`Bolt banner default 4`] = `
+<bolt-banner>
   <div class="c-bolt-banner c-bolt-banner--status-information c-bolt-banner--align-center">
     <ssr-keep for="bolt-banner">
-      This banner is trying to convey information
+      This is a banner
     </ssr-keep>
   </div>
 </bolt-banner>
 `;
 
-exports[`<bolt-banner> Component Status of the banner message: success 1`] = `
-<bolt-banner status="success">
-  <div class="c-bolt-banner c-bolt-banner--status-success c-bolt-banner--align-center">
-    <ssr-keep for="bolt-banner">
-      This banner is trying to convey success
-    </ssr-keep>
-  </div>
-</bolt-banner>
-`;
-
-exports[`<bolt-banner> Component Status of the banner message: warning 1`] = `
-<bolt-banner status="warning">
-  <div class="c-bolt-banner c-bolt-banner--status-warning c-bolt-banner--align-center">
-    <ssr-keep for="bolt-banner">
-      This banner is trying to convey warning
-    </ssr-keep>
-  </div>
-</bolt-banner>
-`;
-
-exports[`<bolt-banner> Component Text alignment: center 1`] = `
+exports[`Bolt banner prop - align: center 1`] = `
 <bolt-banner align="center">
   <div class="c-bolt-banner c-bolt-banner--status-information c-bolt-banner--align-center">
     <ssr-keep for="bolt-banner">
-      The text is aligned to the center
+      This is a banner
     </ssr-keep>
   </div>
 </bolt-banner>
 `;
 
-exports[`<bolt-banner> Component Text alignment: end 1`] = `
+exports[`Bolt banner prop - align: end 1`] = `
 <bolt-banner align="end">
   <div class="c-bolt-banner c-bolt-banner--status-information c-bolt-banner--align-end">
     <ssr-keep for="bolt-banner">
-      The text is aligned to the end
+      This is a banner
     </ssr-keep>
   </div>
 </bolt-banner>
 `;
 
-exports[`<bolt-banner> Component Text alignment: start 1`] = `
+exports[`Bolt banner prop - align: start 1`] = `
 <bolt-banner align="start">
   <div class="c-bolt-banner c-bolt-banner--status-information c-bolt-banner--align-start">
     <ssr-keep for="bolt-banner">
-      The text is aligned to the start
+      This is a banner
+    </ssr-keep>
+  </div>
+</bolt-banner>
+`;
+
+exports[`Bolt banner prop - status: error 1`] = `
+<bolt-banner status="error">
+  <div class="c-bolt-banner c-bolt-banner--status-error c-bolt-banner--align-center">
+    <ssr-keep for="bolt-banner">
+      This is a banner
+    </ssr-keep>
+  </div>
+</bolt-banner>
+`;
+
+exports[`Bolt banner prop - status: information 1`] = `
+<bolt-banner status="information">
+  <div class="c-bolt-banner c-bolt-banner--status-information c-bolt-banner--align-center">
+    <ssr-keep for="bolt-banner">
+      This is a banner
+    </ssr-keep>
+  </div>
+</bolt-banner>
+`;
+
+exports[`Bolt banner prop - status: success 1`] = `
+<bolt-banner status="success">
+  <div class="c-bolt-banner c-bolt-banner--status-success c-bolt-banner--align-center">
+    <ssr-keep for="bolt-banner">
+      This is a banner
+    </ssr-keep>
+  </div>
+</bolt-banner>
+`;
+
+exports[`Bolt banner prop - status: warning 1`] = `
+<bolt-banner status="warning">
+  <div class="c-bolt-banner c-bolt-banner--status-warning c-bolt-banner--align-center">
+    <ssr-keep for="bolt-banner">
+      This is a banner
     </ssr-keep>
   </div>
 </bolt-banner>

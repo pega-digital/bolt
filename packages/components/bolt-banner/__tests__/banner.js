@@ -1,41 +1,88 @@
-import { render, stopServer } from '../../../testing/testing-helpers';
+import { render, stopServer, renderWC } from '../../../testing/testing-helpers';
 import schema from '../banner.schema';
+const componentSelector = 'bolt-banner';
 const { status, align } = schema.properties;
+let page, fixtures;
 
-describe('<bolt-banner> Component', () => {
-  afterAll(async () => {
-    await stopServer();
-  }, 100);
+afterAll(async () => {
+  await stopServer();
+  await page.close();
+}, 100);
 
-  // Basic Usage
-  test('Basic usage', async () => {
+beforeEach(async () => {
+  await page.evaluate(() => {
+    document.body.innerHTML = '';
+  });
+});
+
+beforeAll(async () => {
+  page = await global.__BROWSER__.newPage();
+  await page.goto('http://127.0.0.1:4444/', {
+    timeout: 0,
+  });
+
+  const defaultData = {
+    content: 'This is a banner',
+  };
+
+  fixtures = {
+    defaultData,
+  };
+});
+
+describe('Bolt banner', () => {
+  // With a Web Component
+  test(`default`, async () => {
     const results = await render('@bolt-components-banner/banner.twig', {
-      content: 'This is a banner',
+      ...fixtures.defaultData,
     });
-    expect(results.ok).toBe(true);
-    expect(results.html).toMatchSnapshot();
+
+    const { innerHTML, outerHTML } = await renderWC(
+      componentSelector,
+      results.html,
+      page,
+    );
+
+    await expect(results.ok).toBe(true);
+    await expect(results.html).toMatchSnapshot();
+    await expect(innerHTML).toMatchSnapshot();
+    await expect(outerHTML).toMatchSnapshot();
   });
 
-  // Props
-  status.enum.forEach(async statusChoice => {
-    test(`Status of the banner message: ${statusChoice}`, async () => {
+  // Without a Web Component
+  test(`default`, async () => {
+    const results = await render('@bolt-components-banner/banner.twig', {
+      ...fixtures.defaultData,
+    });
+
+    await expect(results.ok).toBe(true);
+    await expect(results.html).toMatchSnapshot();
+  });
+});
+
+describe('Bolt banner prop -', () => {
+  // Target each of the schema keys with the following pattern
+  status.enum.forEach(async option => {
+    test(`status: ${option}`, async () => {
       const results = await render('@bolt-components-banner/banner.twig', {
-        content: `This banner is trying to convey ${statusChoice}`,
-        status: statusChoice,
+        ...fixtures.defaultData,
+        status: option,
       });
-      expect(results.ok).toBe(true);
-      expect(results.html).toMatchSnapshot();
+
+      await expect(results.ok).toBe(true);
+      await expect(results.html).toMatchSnapshot();
     });
   });
 
-  align.enum.forEach(async alignChoice => {
-    test(`Text alignment: ${alignChoice}`, async () => {
+  align.enum.forEach(async option => {
+    test(`align: ${option}`, async () => {
       const results = await render('@bolt-components-banner/banner.twig', {
-        content: `The text is aligned to the ${alignChoice}`,
-        align: alignChoice,
+        ...fixtures.defaultData,
+        align: option,
       });
-      expect(results.ok).toBe(true);
-      expect(results.html).toMatchSnapshot();
+
+      await expect(results.ok).toBe(true);
+      await expect(results.html).toMatchSnapshot();
     });
   });
 });
